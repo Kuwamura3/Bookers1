@@ -49,3 +49,7 @@ div > input, textarea{
 label {
     display: block;
 }
+
+.notice {
+    color: green;
+}
