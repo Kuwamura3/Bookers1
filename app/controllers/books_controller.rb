@@ -4,14 +4,18 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
     @book = Book.new
+    @books = Book.all
   end
+
 
   def show
     @book = Book.find(params[:id])
   end
 
+  def new
+    @book = Book.new
+  end
 
   def create
     @book = Book.new(book_params)
@@ -19,6 +23,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully created."
       redirect_to book_path(@book.id)
     else
+      @books = Book.all
       render :index
     end
   end
