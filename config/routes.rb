@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
  resources :books
  root to: "books#top"
+ get 'books' => 'books#new'
 
 end

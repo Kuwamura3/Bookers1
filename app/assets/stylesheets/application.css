@@ -53,3 +53,15 @@ label {
 .notice {
     color: green;
 }
+
+.alert {
+    border:2px solid red;
+}
+
+.error_explanation {
+    color: white;
+    background-color: red;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: 0;
+}
